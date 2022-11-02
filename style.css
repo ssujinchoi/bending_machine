@@ -17,6 +17,10 @@ ul {
     list-style: none;
 }
 
+.comBtnStyl {
+    cursor: pointer;
+}
+
 .txt-hide {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -112,7 +116,6 @@ ul {
 .beverage-pick-btn {
     width: 100%;
     height: 100%;
-    cursor: pointer;
     border: 0;
     border-radius: 10px;
     background-color: #FFFFFF;
@@ -238,7 +241,7 @@ ul {
     border-radius: 5px;
 }
 
-.return-coin-btn, .deposit-coin-btn, .get-btn {
+.return-coin-btn, .deposit-coin-btn, .get-btn{
     width: 94px;
 }
 
