@@ -1,0 +1,376 @@
+body {
+  background-color: #eae8fe;
+  font-family: "Noto Sans KR";
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+button,
+h1,
+h2,
+h3,
+h4,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.comBtnStyl {
+  cursor: pointer;
+}
+
+.txt-hide {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.ben-machine-wrap {
+  margin: 0 auto;
+  min-width: 386px;
+  text-align: center;
+}
+
+.logo-img {
+  width: 386px;
+  height: 180px;
+  margin-bottom: 62px;
+}
+
+/* 벤딩머신 */
+.ben-machine-section {
+  display: flex;
+  justify-content: center;
+}
+
+.pick-bever-section,
+.now-money-div,
+.gain-bever-section {
+  background-color: #ffffff;
+}
+
+/* 음료선택 섹션 */
+.pick-bever-section {
+  width: 360px;
+  height: 545px;
+  padding: 31px 27px 28px 27px;
+  margin-right: 28px;
+}
+
+.bever-ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px 12px;
+}
+
+.bever-list-item {
+  position: relative;
+  width: 94px;
+  height: 130px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.bever-list-item span {
+  display: block;
+}
+
+.bever-list-item img {
+  display: block;
+  margin: 0 auto;
+}
+
+.bever-list-item.sold-out::before {
+  position: absolute;
+  content: "품절";
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background-image: url(../images/sold-out.png);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.bever-name {
+  font-size: 9px;
+  margin: 7px 0;
+}
+
+.bever-price {
+  width: 70px;
+  height: 22px;
+  margin: 0 auto;
+  padding: 5px 16px 5px 15px;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #6327fe;
+  border-radius: 50px;
+}
+
+.bever-pick-btn {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.return-info,
+.deposit-info,
+.cart-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.return-info {
+  margin-top: 20px;
+}
+.deposit-info {
+  margin-top: 12px;
+}
+.cart-info {
+  margin-top: 12px;
+}
+
+.return-info .balance,
+.deposit-info .deposit-input,
+.cart-info .cart-ul {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.return-info .balance {
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  background-color: #eae8fe;
+}
+
+.return-info .balance-txt {
+  float: right;
+}
+
+.deposit-input {
+  width: 200px;
+  height: 32px;
+  padding: 6px 131px 8px 6px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+.deposit-input::placeholder {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #bdbdbd;
+}
+
+.cart-ul {
+  height: 106px;
+  padding: 11px 11px;
+  font-weight: 500;
+  border: 1px solid #bdbdbd;
+  background: #eae8fe;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* 스크롤바 설정 */
+.cart-ul::-webkit-scrollbar, 
+.gain-bever-ul::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+
+.cart-ul::-webkit-scrollbar-thumb, .gain-bever-ul::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 50px;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+}
+
+.cart-ul::-webkit-scrollbar-track, .gain-bever-ul::-webkit-scrollbar-track {
+  background-color: #eae8fe;
+}
+.cart-ul .cart-list-item {
+  width: 170px;
+  padding: 6px 8px 8px 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  line-height: 0;
+}
+
+.cart-list-item + .cart-list-item {
+  margin-top: 6px;
+}
+
+.cart-list-item .cart-item-btn {
+  width: 100%;
+  background-color: inherit;
+  border: 0;
+}
+
+.cart-list-item .cart-item-img,
+.cart-list-item .cart-item-name,
+.cart-list-item .cart-item-num {
+  display: block;
+}
+
+.cart-list-item .cart-item-img {
+  float: left;
+  margin-right: 10px;
+  width: 18px;
+  height: 33px;
+}
+
+.cart-list-item .cart-item-name {
+  float: left;
+  font-size: 9px;
+  line-height: 33px;
+}
+
+.cart-item-num, .gain-bever-num{
+  float: right;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+.return-coin-btn,
+.deposit-coin-btn,
+.get-btn {
+  width: 94px;
+}
+
+.return-coin-btn,
+.deposit-coin-btn {
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
+  background-color: inherit;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-radius: 5px;
+}
+
+.get-btn {
+  height: 106px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  background-color: #6327fe;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 5px;
+}
+
+/* 소지금 및 획득한 음료 섹션 */
+.now-info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.now-money-div {
+  width: 360px;
+  height: 50px;
+  padding: 9px 27px;
+}
+
+.now-money {
+  padding: 6px 10px;
+  background-color: #eae8fe;
+  border-radius: 5px;
+  text-align: left;
+  line-height: 20px;
+}
+
+.now-money .now-money-txt {
+  float: right;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: inherit;
+}
+
+.gain-bever-section {
+  width: 360px;
+  height: 474px;
+  padding: 0 27px 52px 27px;
+}
+
+.gain-bever-title {
+  margin-top: 25px;
+  margin-bottom: 13px;
+  /* 폰트 종류는 body에 박고, 폰트 굵기는 각 클래스마다 지정해주는게 좋은건지.. */
+  /*font-family: 'Noto Sans KR';*/
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+.gain-bever-ul {
+  width: 306px;
+  height: 364px;
+  padding: 12px;
+  margin-bottom: 6px;
+  background-color: #eae8fe;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.gain-bever-ul .gain-bever-list-item {
+  width: 276px;
+  padding: 6px 8px 7px 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  line-height: 0;
+}
+
+.gain-bever-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.gain-bever-list-item .gain-bever-img {
+  width: 18px;
+  height: 33px;
+}
+
+.gain-bever-list-item .gain-bever-name {
+    font-size: 9px;
+    margin-right: 127px;
+}
+
+.total-price-txt {
+  float: right;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+}
