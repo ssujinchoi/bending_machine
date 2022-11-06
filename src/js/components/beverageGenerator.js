@@ -3,9 +3,10 @@ export function BeverageGenerator () {
 }
 
 BeverageGenerator.prototype.setup = function() {
-    this.getData(json => {
+    this.getData((json) => {
         this.renderData(json);
     })
+  
 }
 
 BeverageGenerator.prototype.getData = async function(callback) {
@@ -18,14 +19,14 @@ BeverageGenerator.prototype.getData = async function(callback) {
     }
 }
 
-BeverageGenerator.prototype.renderData = function(dataJirong) {
-    console.log('데이터를 잘 받아오는지 확인', dataJirong);
-
+BeverageGenerator.prototype.renderData = function(data) {
+    // 최적화
     const docFrag = document.createDocumentFragment();
-
-    dataJirong.forEach(el => {
+    
+    data.forEach((el) => {
         const item = document.createElement('li');
         item.classList.add('bever-list-item');
+        
         const itemTemplate = `
         <button type="button" class="bever-pick-btn comBtnStyl" data-item="${el.name}" data-count="${el.count}" data-price="${el.cost}" data-img="${el.img}">
         <img src="src/images/${el.img}" alt="">
@@ -35,9 +36,9 @@ BeverageGenerator.prototype.renderData = function(dataJirong) {
         `;
         
         item.innerHTML = itemTemplate;
-        // 최적화
         docFrag.appendChild(item);
     });
     
     this.itemList.appendChild(docFrag);
 }
+

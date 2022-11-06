@@ -34,17 +34,5 @@
         "cost": 1000,
         "img": "Orange_Cola.png",
         "count": 5
-    },
-    {
-        "name": "Green Cola",
-        "cost": 1000,
-        "img": "Green_Cola.png",
-        "count": 5
-    },
-    {
-        "name": "Orange Cola",
-        "cost": 1000,
-        "img": "Orange_Cola.png",
-        "count": 5
     }
 ]

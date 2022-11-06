@@ -36,7 +36,7 @@ ul {
   overflow: hidden;
 }
 
-.ben-machine-wrap {
+.machine-wrap {
   margin: 0 auto;
   min-width: 386px;
   text-align: center;
@@ -49,7 +49,7 @@ ul {
 }
 
 /* 벤딩머신 */
-.ben-machine-section {
+.vMachine {
   display: flex;
   justify-content: center;
 }
