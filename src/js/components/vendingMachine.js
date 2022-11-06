@@ -42,8 +42,25 @@ export class VendingMachine {
                     this.moneyPut.value = "";
                 } else { // 입금액이 소지금 보다 많을때
                     alert('소지금이 부족합니다.');
-                    this.moneyPut.value = "";
+                    this.moneyPut.value = '';
                 }
+            }
+        })
+
+        /**
+         * 2. 거스름돈 반환 기능
+         * 거스름돈 반환 버튼을 누르면 -> 소지금 = 기존 소지금 + 잔액
+         * 잔액은 초기화 된다.
+         */
+        this.returnBtn.addEventListener('click', () => {
+            const myMoneyVal = parseInt(this.myMoneyTxt.textContent.replaceAll(',', '')); 
+            const balanceVal = parseInt(this.balanceTxt.textContent.replaceAll(',', ''));
+
+            if(balanceVal) {
+                this.myMoneyTxt.textContent = new Intl.NumberFormat().format(myMoneyVal + balanceVal) + '원'
+                this.balanceTxt.textContent = '원';
+            } else {
+                alert('반환할 거스름돈이 없습니다.');
             }
         })
     }
