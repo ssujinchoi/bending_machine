@@ -7,13 +7,13 @@
     },
     {
         "name": "Violet Cola",
-        "cost": 1000,
+        "cost": 2000,
         "img": "Violet_Cola.png",
         "count": 5
     },
     {
         "name": "Yellow Cola",
-        "cost": 1000,
+        "cost": 1500,
         "img": "Yellow_Cola.png",
         "count": 5
     },
@@ -25,7 +25,7 @@
     },
     {
         "name": "Green Cola",
-        "cost": 1000,
+        "cost": 1700,
         "img": "Green_Cola.png",
         "count": 5
     },

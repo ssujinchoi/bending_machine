@@ -1,76 +1,102 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>벤딩머신</title>
-    <link rel="stylesheet" href="./src/style/style.css">
-</head>
-<body>
-    <div class="machine-wrap">
-        <header class="machine-header">
-            <!-- h1이 마크업이 꼭 들어가야하는가? -->
-            <img src="./src/images/colacola_logo.png" alt="" class="logo-img">
-        </header>
-        <article class="vMachine">
-            <h2 class="txt-hide">ddd</h2>
-            <section class="pick-bever-section">
-                <h3 class="txt-hide">음료 선택</h3>
-                <ul class="bever-ul">
-                    <!--<li class="bever-list-item">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>벤딩머신</title>
+        <link rel="stylesheet" href="./src/style/style.css" />
+    </head>
+    <body>
+        <div class="machine-wrap">
+            <header class="machine-header">
+                <!-- h1이 마크업이 꼭 들어가야하는가? -->
+                <img
+                    src="./src/images/colacola_logo.png"
+                    alt=""
+                    class="logo-img"
+                />
+            </header>
+            <article class="vMachine">
+                <h2 class="txt-hide">ddd</h2>
+                <section class="pick-bever-section">
+                    <h3 class="txt-hide">음료 선택</h3>
+                    <ul class="bever-ul">
+                        <!--<li class="bever-list-item">
                         <button type="button" class="bever-pick-btn comBtnStyl">
                             <img src="./src/images/original_cola.png" alt="오리지널 콜라">
                             <span class="bever-name">Original_Cola</span>
                             <span class="bever-price">1000원</span>
                         </button>
                     </li>-->
-                </ul>
-                <div class="return-info">
-                    <div class="balance">
-                    잔액 :<span class="balance-txt">원</span>
-                </div>
-                    <button type="button" class="return-coin-btn comBtnStyl">거스름돈 반환</button>
-                </div>
-                <div class="deposit-info">
-                    <input type="text" placeholder="입금액 입력" class="deposit-input">
-                    <button type="button" class="deposit-coin-btn comBtnStyl">입금</button>
-                </div>
-                <div class="cart-info">
-                    <ul class="cart-ul">
-                        <li class="cart-list-item">
+                    </ul>
+                    <div class="return-info">
+                        <div class="balance">
+                            잔액 :<span class="balance-txt">원</span>
+                        </div>
+                        <button
+                            type="button"
+                            class="return-coin-btn comBtnStyl"
+                        >
+                            거스름돈 반환
+                        </button>
+                    </div>
+                    <div class="deposit-info">
+                        <input
+                            type="text"
+                            placeholder="입금액 입력"
+                            class="deposit-input"
+                        />
+                        <button
+                            type="button"
+                            class="deposit-coin-btn comBtnStyl"
+                        >
+                            입금
+                        </button>
+                    </div>
+                    <div class="cart-info">
+                        <ul class="cart-ul">
+                            <!--<li class="cart-item">
                             <button class="cart-item-btn comBtnStyl">
                                 <img src="./src/images/original_cola.png" alt="오리지널 콜라" class="cart-item-img">
                                 <span class="cart-item-name">Original_Cola</span>
                                 <span class="cart-item-num">1</span>
                             </button>
-                        </li>
-                    </ul>
-                    <button type="button" class="get-btn comBtnStyl">획득</button>
-                </div>
-            </section>
-            <section class="now-info-section">
-                <h3 class="txt-hide">현재 소지금과 획득한 음료 정보</h3>
-                <div class="now-money-div">
-                    <div class="now-money">
-                        소지금 :
-                        <span class="now-money-txt">25,000원</span>
+                        </li>-->
+                        </ul>
+                        <button type="button" class="get-btn comBtnStyl">
+                            획득
+                        </button>
                     </div>
-                </div>
-                <section class="gain-bever-section">
-                    <h4 class="gain-bever-title">획득한 음료</h4>
-                    <ul class="gain-bever-ul">
-                        <li class="gain-bever-list-item">
-                            <img class="gain-bever-img" src="./src/images/original_cola.png" alt="오리지널 콜라">
-                            <span class="gain-bever-name">Original_Cola</span>
-                            <span class="gain-bever-num">1</span>
-                        </li>
-                    </ul>
-                    <span class="total-price-txt">총금액 : 9,000 원</span>
                 </section>
-            </section>
-        </article>
-    </div>
-    <script type="module" src="src/js/index.js"></script>
-</body>
+                <section class="now-info-section">
+                    <h3 class="txt-hide">현재 소지금과 획득한 음료 정보</h3>
+                    <div class="now-money-div">
+                        <div class="now-money">
+                            소지금 :
+                            <span class="now-money-txt">25,000원</span>
+                        </div>
+                    </div>
+                    <section class="gain-bever-section">
+                        <h4 class="gain-bever-title">획득한 음료</h4>
+                        <ul class="gain-bever-ul">
+                            <li class="gain-bever-list-item">
+                                <img
+                                    class="gain-bever-img"
+                                    src="./src/images/original_cola.png"
+                                    alt="오리지널 콜라"
+                                />
+                                <span class="gain-bever-name"
+                                    >Original_Cola</span
+                                >
+                                <span class="gain-bever-num">1</span>
+                            </li>
+                        </ul>
+                        <span class="total-price-txt">총금액 : 9,000 원</span>
+                    </section>
+                </section>
+            </article>
+        </div>
+        <script type="module" src="src/js/index.js"></script>
+    </body>
 </html>
