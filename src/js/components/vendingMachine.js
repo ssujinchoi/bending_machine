@@ -1,5 +1,3 @@
-import { DodecahedronBufferGeometry } from "three";
-
 export class VendingMachine {
     constructor() {
         const pickSection = document.querySelector(".pick-bever-section");
@@ -154,6 +152,12 @@ export class VendingMachine {
                     alert("잔액이 부족합니다. 돈을 입금하세요");
                     this.moneyPut.focus();
                 }
+
+                const cartBtns = this.cartList.querySelectorAll("button");
+
+                cartBtns.forEach((el) => {
+                    el.addEventListener("click", cartDelete);
+                });
             });
         });
 
@@ -161,5 +165,8 @@ export class VendingMachine {
          * 4. 음료 장바구니 삭제 기능
          *
          */
+        //cartDelete() {
+
+        //}
     }
 }
